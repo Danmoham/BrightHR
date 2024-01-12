@@ -10,7 +10,6 @@ export const HomePage = () => {
   const [isSortedBy, setIsSortedBy] = useState("name");
 
   useEffect(() => {
-    setIsLoading(true);
     setAllDocuments(SortingData(data, isSortedBy, isAscending));
     setIsLoading(false);
   }, [isLoading, isAscending, isSortedBy]);
