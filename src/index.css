@@ -1,13 +1,13 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
-h1{
+h1 {
   text-align: center;
 }
-.icon{
+.icon {
   max-height: 50px;
 }
-.folders-files-group{
+.folders-files-group {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -15,16 +15,16 @@ h1{
 ul {
   list-style-type: none;
 }
-#date{
+#date {
   font-size: 12px;
 }
 .folder:hover {
   cursor: pointer;
 }
-a{
+a {
   text-decoration: none;
   color: black;
 }
-#align-home{
+#align-home {
   text-align: center;
 }

@@ -26,6 +26,7 @@
       {
         "type": "folder",
         "name": "myfolder",
+        "added": "2017-04-03",
         "files": [
           {
             "type": "doc",
@@ -39,7 +40,8 @@
           }
         ]
       }
-    ]
+    ],
+    "added": "2016-12-06"
   },
   {
     "type": "csv",
@@ -49,6 +51,7 @@
   {
     "type": "folder",
     "name": "Misc",
+    "added": "2017-07-03",
     "files": [
       {
         "type": "doc",

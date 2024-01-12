@@ -34,9 +34,12 @@ export const FormattingData = ({ allDocuments }) => {
                 <li>
                   <b>{item.name}</b>
                 </li>
+                <li key={item.name + item.added} id="date">
+                  {item.added}
+                </li>
               </ul>
             </Link>
-          );
+          )
         }
       })}
     </div>

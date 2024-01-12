@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { FormattingData } from "./FormattingData";
 import data from "../data/information.json";
 import { gettingCorrectFolderDetails } from "../libs/gettingFolderDetails";
+import { SortBy } from "./SortBy";
 
 export const OpenedFolder = () => {
   const [allDocuments, setAllDocuments] = useState([]);
