@@ -1,19 +1,30 @@
-const gettingCorrectFolderDetails = (fullDocument, documentName) => {
-  console.log(fullDocument);
+// testing File!
+export const gettingCorrectFolderDetails = (fullDocument, documentName) => {
   if (fullDocument.length === 0) {
     return "Folder not found";
   }
-
   for (let i = 0; i < fullDocument.length; i++) {
-    if (fullDocument[i].name === documentName) {
-      return fullDocument[i].files;
-    } else if (fullDocument[i].files) {
-      // gets the return value of the recursive call
-      const result = gettingCorrectFolderDetails(fullDocument[i].files, documentName);
-      if (result) {
+    // to loop over the nested object
+    const result = searchFolder(fullDocument[i], documentName);
+    if (result !== "Folder not found") {
+      return result;
+    }
+  }
+  return "Folder not found";
+};
+
+const searchFolder = (folder, documentName) => {
+  if (folder.name === documentName) {
+    return folder.files;
+  } else if (folder.files) {
+    for (let i = 0; i < folder.files.length; i++) {
+      // carry's on calling back to go deeper in the loop
+      const result = searchFolder(folder.files[i], documentName);
+      if (result !== "Folder not found") {
         return result;
       }
     }
   }
+
+  return "Folder not found";
 };
-module.exports = { gettingCorrectFolderDetails };

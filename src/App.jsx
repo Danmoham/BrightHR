@@ -1,7 +1,7 @@
 import { useState } from "react";
 import data from "./data/information.json";
 import { Header } from "./components/Header";
-import { DocumentsLocation } from "./components/DocumentsLocation";
+import { HomePage } from "./components/HomePage";
 import { Route, Routes } from "react-router-dom";
 import { OpenedFolder } from "./components/OpenedFolder";
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <div>
       <Header />
       <Routes>
-        <Route path="/" element={<DocumentsLocation />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/folder/:folder_name" element={<OpenedFolder/>}/>
       </Routes>
     </div>
